@@ -18,13 +18,13 @@ Common files for both sets:
 
 The analysis will merge and clean the dataset, extracts only mean and standard deviation variables, give appropriate labels for the variables and activities, and finally, find the average of each variable for each activity and each subject.
 
-1. Merges the training and the test sets to create one data set.
+1.Merges the training and the test sets to create one data set.
 - read the files in test set and merge into one single dataset "test".
 - read the files in train set and merge into one single dataset "train."
 - merge "train" and "test" into one dataframe "all"".
 - read "features.text" file, change the V2 column to character which is used to name the columns in "all" dataset.
 
-2. Extracts only the measurements on the mean and standard deviation for each measurement. 
+2.Extracts only the measurements on the mean and standard deviation for each measurement. 
 - create a new dataset "meanstd" that only contains the measurements on the mean() and std() using grep function. Please note meanfreq() are not selected as they are weighted variables.
 
 3.Uses descriptive activity names to name the activities in the data set.
@@ -73,12 +73,12 @@ All of the above signals has the following estimations:
 - std
 
 **Abbreviation**
-t-time domain
-f-frequency domain derived from time domain sigal by fast foutrier transform
-acc-linear acceleration from the accelerometer
-gyro-angular velocity from the gyroscope
-jerk-jerk signal from body linear acceleration and angular velocity derived in time
-body-body motion
-gravity-gravitational motion
-mean-mean value
-std-standard deviation
+1.t-time domain
+2.f-frequency domain derived from time domain sigal by fast foutrier transform
+3.acc-linear acceleration from the accelerometer
+4.gyro-angular velocity from the gyroscope
+5.jerk-jerk signal from body linear acceleration and angular velocity derived in time
+6.body-body motion
+7.gravity-gravitational motion
+8.mean-mean value
+9.std-standard deviation
