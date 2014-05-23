@@ -19,56 +19,58 @@ Common files for both sets:
 The analysis will merge and clean the dataset, extracts only mean and standard deviation variables, give appropriate labels for the variables and activities, and finally, find the average of each variable for each activity and each subject.
 
 1. Merges the training and the test sets to create one data set.
--read the files in test set and merge into one single dataset "test".
--read the files in train set and merge into one single dataset "train."
--merge "train" and "test" into one dataframe "all"".
--read "features.text" file, change the V2 column to character which is used to name the columns in "all" dataset.
+- read the files in test set and merge into one single dataset "test".
+- read the files in train set and merge into one single dataset "train."
+- merge "train" and "test" into one dataframe "all"".
+- read "features.text" file, change the V2 column to character which is used to name the columns in "all" dataset.
 
 2. Extracts only the measurements on the mean and standard deviation for each measurement. 
--create a new dataset "meanstd" that only contains the measurements on the mean() and std() using grep function. Please note meanfreq() are not selected as they are weighted variables.
+- create a new dataset "meanstd" that only contains the measurements on the mean() and std() using grep function. Please note meanfreq() are not selected as they are weighted variables.
 
 3.Uses descriptive activity names to name the activities in the data set.
--Use gsub to remove any non-alphabetic characters from the column names of "meanstd".
--change all column names of "meanstd" to lowercase, and fix typo/duplicates ("bodybody" are replaced with "body").
+- Use gsub to remove any non-alphabetic characters from the column names of "meanstd".
+- change all column names of "meanstd" to lowercase, and fix typo/duplicates ("bodybody" are replaced with "body").
 
 4.Appropriately labels the data set with descriptive activity names. 
--read "activity_labels.txt" file and rename the column as "activityid" and "activity"
--merge the "activity" dataset with the "meanstd" dataset based on "activityid", then each measurement are labeled as "walking", "laying" etc. rather than id number.
--get rid of the redundant "activityid" column from the resulting "labeled" dataset from the merging.
+- read "activity_labels.txt" file and rename the column as "activityid" and "activity"
+- merge the "activity" dataset with the "meanstd" dataset based on "activityid", then each measurement are labeled as "walking", "laying" etc. rather than id number.
+- get rid of the redundant "activityid" column from the resulting "labeled" dataset from the merging.
 
 5.Creates a second, independent tidy data set with the average of each variable for each activity and each subject. 
--use aggregate function to calculate the average of each varibles in "labeled" for each activity and each subject, the result is stored in a new dataset "averagedata".
--write the new dataset to "averagerun.txt" file.
+- use aggregate function to calculate the average of each varibles in "labeled" for each activity and each subject, the result is stored in a new dataset "averagedata".
+- write the new dataset to "averagerun.txt" file.
 
 ## Description of the new dataset
 
 **Varibles**
 
--subjectid:Indentifier for each volunteer who performs the experiment
--activity:6 activities performed by the volunteer 
+- subjectid:Indentifier for each volunteer who performs the experiment
+- activity:6 activities performed by the volunteer 
 
 Three-dimensional signals in the x,y and z direction. Please refer to the Abbreviation section for information.
--tbodyacc
--tgravityacc
--tbodyaccjerk
--tbodygyro
--tbodygryojerk
--fbodyacc
--fbodyaccjerk
--fbodygyro
+- tbodyacc
+- tgravityacc
+- tbodyaccjerk
+- tbodygyro
+- tbodygryojerk
+- fbodyacc
+- fbodyaccjerk
+- fbodygyro
 
 Magnitude signals calculated from the 3D signals using Euclidean norm.
--tbodyaccmag
--tgravityaccmag
--tbodyaccjerkmag
--tbodygyromag
--tbodygyrojerkmag
--fbodyaccmag
--fbodyaccjerkmag
--fbodygyromag
--fbodygyrojerkmag
+- tbodyaccmag
+- tgravityaccmag
+- tbodyaccjerkmag
+- tbodygyromag
+- tbodygyrojerkmag
+- fbodyaccmag
+- fbodyaccjerkmag
+- fbodygyromag
+- fbodygyrojerkmag
 
-All of the above signals has 'mean' and 'std' estimations.
+All of the above signals has the following estimations:
+- mean
+- std
 
 **Abbreviation**
 t-time domain
@@ -78,4 +80,5 @@ gyro-angular velocity from the gyroscope
 jerk-jerk signal from body linear acceleration and angular velocity derived in time
 body-body motion
 gravity-gravitational motion
-
+mean-mean value
+std-standard deviation
