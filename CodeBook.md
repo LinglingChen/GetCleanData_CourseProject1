@@ -72,13 +72,13 @@ All of the above signals has the following estimations:
 - mean
 - std
 
-**Abbreviation**
-1.t-time domain
-2.f-frequency domain derived from time domain sigal by fast foutrier transform
-3.acc-linear acceleration from the accelerometer
-4.gyro-angular velocity from the gyroscope
-5.jerk-jerk signal from body linear acceleration and angular velocity derived in time
-6.body-body motion
-7.gravity-gravitational motion
-8.mean-mean value
-9.std-standard deviation
+**Abbreviation**  
+1.t-time domain  
+2.f-frequency domain derived from time domain sigal by fast foutrier transform  
+3.acc-linear acceleration from the accelerometer  
+4.gyro-angular velocity from the gyroscope  
+5.jerk-jerk signal from body linear acceleration and angular velocity derived in time  
+6.body-body motion  
+7.gravity-gravitational motion  
+8.mean-mean value  
+9.std-standard deviation  
